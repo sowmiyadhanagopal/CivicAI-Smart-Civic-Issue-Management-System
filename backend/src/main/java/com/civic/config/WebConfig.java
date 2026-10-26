@@ -1,5 +1,5 @@
 
-        package com.civic.config;
+package com.civic.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,8 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
-                                "https://civic-ai-smart-civic-issue-management-system-frontend-*.vercel.app",
-                                "https://civic-ai-smart-civic-issue-management-system-frontend-*.vercel.app"
+                                "https://civic-ai-smart-civic-issue-management-system-*.vercel.app",
+                                "https://civic-ai-smart-civic-issue-management-system.vercel.app"
                         )
                         .allowedMethods(
                                 "GET", "POST", "PUT", "PATCH",
