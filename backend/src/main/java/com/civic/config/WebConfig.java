@@ -1,5 +1,5 @@
 
-package com.civic.config;
+        package com.civic.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
