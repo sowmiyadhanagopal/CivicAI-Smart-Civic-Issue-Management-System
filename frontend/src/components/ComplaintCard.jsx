@@ -32,7 +32,7 @@ const ComplaintCard = ({ complaint, delay }) => {
       <div className={`card glass animate-fade-in`} style={{ animationDelay: `${delay}s`, cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column' }}>
         {complaint.imageUrl && (
           <div style={{ margin: '-1.5rem -1.5rem 1.5rem -1.5rem', height: '180px', overflow: 'hidden', borderTopLeftRadius: 'var(--border-radius)', borderTopRightRadius: 'var(--border-radius)' }}>
-            <img src={`http://localhost:8080${complaint.imageUrl}`} alt="Complaint Evidence" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={`${import.meta.env.VITE_API_URL}${complaint.imageUrl}`} alt="Complaint Evidence" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         )}
         <div className="card-header">

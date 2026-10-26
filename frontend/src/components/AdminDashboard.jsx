@@ -13,7 +13,7 @@ function AdminDashboard() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/complaints/analytics')
+       fetch(`${import.meta.env.VITE_API_URL}/api/complaints/analytics`)
             .then(res => res.json())
             .then(data => {
                 console.log("Fetched analytics data:", data);

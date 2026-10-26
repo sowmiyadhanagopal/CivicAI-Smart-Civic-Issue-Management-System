@@ -30,11 +30,14 @@ const Signup = () => {
     }
     
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/signup', {
-        name: formData.name,
-        email: formData.email,
-        password: formData.password
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/auth/signup`,
+        {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password
+        }
+      );
       
       setSuccess('Account created successfully! Redirecting to login...');
       setError('');

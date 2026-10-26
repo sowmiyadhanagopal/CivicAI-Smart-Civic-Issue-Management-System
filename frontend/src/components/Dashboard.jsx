@@ -35,7 +35,7 @@ const Dashboard = () => {
         if (status) queryParams.append('status', status);
         if (sort) queryParams.append('sort', sort);
 
-        const response = await fetch(`http://localhost:8080/api/complaints?${queryParams.toString()}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/complaints`);
         if (!response.ok) {
           throw new Error('Failed to fetch complaints');
         }
