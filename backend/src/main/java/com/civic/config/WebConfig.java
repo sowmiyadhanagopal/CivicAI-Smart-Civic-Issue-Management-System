@@ -24,7 +24,7 @@ public class WebConfig {
                                 "DELETE", "OPTIONS"
                         )
                         .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowCredentials(false);
             }
         };
     }
