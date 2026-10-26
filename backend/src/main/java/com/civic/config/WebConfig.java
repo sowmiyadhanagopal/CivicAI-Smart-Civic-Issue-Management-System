@@ -16,14 +16,16 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
-                                "https://civic-ai-smart-civic-issue-management-system*.vercel.app"
+                                "https://civic-ai-smart-civic-issue-management-system-*.vercel.app",
+                                "https://civic-ai-smart-civic-issue-management-system.vercel.app",
+                                "http://localhost:5173"
                         )
                         .allowedMethods(
                                 "GET", "POST", "PUT", "PATCH",
                                 "DELETE", "OPTIONS"
                         )
                         .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowCredentials(false);
             }
         };
     }
