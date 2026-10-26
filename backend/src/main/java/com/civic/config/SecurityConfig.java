@@ -1,5 +1,5 @@
 
-        package com.civic.config;
+package com.civic.config;
 
 import com.civic.security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
